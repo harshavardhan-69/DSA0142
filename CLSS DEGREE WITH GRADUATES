@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+class degree
+{
+  public:
+    degree()
+    {
+        std::cout << "I got a degree" << std::endl;
+    }
+};
+
+class UG : public degree
+{
+  public:
+    UG()
+    {
+        std::cout << "I am in the UG class" << std::endl;
+    }
+};
+
+class PG : public degree
+{
+  public:
+    PG()
+    {
+        std::cout << "I am in the PG class" << std::endl;
+    }
+};
+
+int main()
+{
+    UG ug;
+    PG pg;
+    return 0;
+}
