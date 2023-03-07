@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class armstrong
+{
+	private:
+		int num;
+		int sum=0;
+		int temp;
+		int r;
+	public:
+		void getdetails(void);
+		void arm(void);
+		void putdetails(void);
+};
+void armstrong :: getdetails(void)
+{
+	cout<<"enter the number: ";
+	cin>>num;
+}
+void armstrong :: arm(void)
+{
+	temp=num;
+	while(num > 0)
+    { 
+        r = num % 10;
+        sum+= (r * r * r);
+        num = num / 10;
+    }
+}
+void armstrong :: putdetails(void)
+{
+	 if(temp == sum)
+    cout << " Armstrong Number." << endl;
+    else
+    cout << "Not Armstrong Number." << endl;
+}
+int main()
+{
+	armstrong arm;
+	arm.getdetails();
+	arm.arm();
+	arm.putdetails();
+	return 0;
+}
